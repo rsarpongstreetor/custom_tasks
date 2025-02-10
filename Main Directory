@@ -1,0 +1,11 @@
+custom_tasks/  # The main package folder
+├── conf/  
+│   └── task/
+│       └── customenv/
+│           ├── task_1.yaml  # YAML configuration for task_1
+│           ├── task_2.yaml  # YAML configuration for task_2
+│           └── __init__.py  # Makes customenv a package
+├── environments/
+│   └── customenv/
+│       └── common.py  # Shared code for your custom environment
+└── __init__.py  # Makes custom_tasks a package

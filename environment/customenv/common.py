@@ -1,12 +1,10 @@
 
 
 
-
-
 from benchmarl.models import SequenceModelConfig, GnnConfig, MlpConfig
 from benchmarl.algorithms import IppoConfig, MappoConfig, QmixConfig, MasacConfig
-from typing import Callable, Dict, List, Optional
-
+from typing import Callable, Dict, List, Optional, Any
+from benchmarl.environments.base import Task
 from benchmarl.environments.common import Task
 from benchmarl.utils import DEVICE_TYPING
 
@@ -21,6 +19,8 @@ import yaml # Import the yaml module
 
 
 class CustomEnvTask(Task):
+    def __init__(self, env_name: str, task_name: str, **kwargs: Dict[str, Any]):
+        super().__init__(env_name, task_name, **kwargs)
     # Your task names.
     # Their config will be loaded from conf/task/customenv
 

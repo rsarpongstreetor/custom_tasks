@@ -3,6 +3,6 @@ defaults:
   - _self_
 
 
-max_steps: 100
+max_steps: 10
 supports_continuous_actions: True
 supports_discrete_actions: True
